@@ -9,15 +9,21 @@ For turning the functionality append Ggrd_handling.c
 ifdef GGRD_NN_BACKWARD_COMPATIBLE
   use_nearneighbor = FALSE;
 #else
+
   /* no interpolation */
   use_nearneighbor = TRUE;
+  
 #endif
+
   if(E->control.ggrd_mat_is_code)
     use_nearneighbor = TRUE;
     
+    
 E->control.ggrd.time_hist.nvtimes=140; ###################### for turning it on
+
   /*
      if we have not initialized the time history structure, do it now
   */
   if(!E->control.ggrd.time_hist.init){
+  
   ##################################################
